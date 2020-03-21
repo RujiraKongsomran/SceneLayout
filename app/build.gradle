@@ -4,6 +4,12 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
 
+    // Add below lines to set compatibility with Java 8 language features for an Android app module.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "com.rujirakongsomran.scenelayout"
         minSdkVersion 22
@@ -31,4 +37,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.esri.arcgisruntime:arcgis-android:100.7.0'
 }
